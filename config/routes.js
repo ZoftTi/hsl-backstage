@@ -7,7 +7,7 @@ export default [
         path: '/user',
         routes: [
           {
-            name: 'login',
+            name: '登录',
             path: '/user/login',
             component: './user/Login',
           },
