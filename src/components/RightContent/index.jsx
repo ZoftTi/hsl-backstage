@@ -3,7 +3,7 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useModel, SelectLang } from 'umi';
 import Avatar from './AvatarDropdown';
-import HeaderSearch from '../HeaderSearch';
+// import HeaderSearch from '../HeaderSearch';
 import styles from './index.less';
 
 const GlobalHeaderRight = () => {
@@ -22,7 +22,7 @@ const GlobalHeaderRight = () => {
 
   return (
     <Space className={className}>
-      <HeaderSearch
+      {/* <HeaderSearch
         className={`${styles.action} ${styles.search}`}
         placeholder="站内搜索"
         defaultValue="umi ui"
@@ -43,10 +43,11 @@ const GlobalHeaderRight = () => {
             label: <a href="https://prolayout.ant.design/">Pro Layout</a>,
             value: 'Pro Layout',
           },
-        ]} // onSearch={value => {
-        //   console.log('input', value);
-        // }}
-      />
+        ]}
+        onSearch={value => {
+           console.log('input', value);
+        }}
+      /> */}
       <Avatar />
       {/* <SelectLang className={styles.action} /> */}
     </Space>

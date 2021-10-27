@@ -2,13 +2,14 @@ const Settings = {
   navTheme: 'light',
   // 拂晓蓝
   primaryColor: '#1890ff',
-  layout: 'mix',
   contentWidth: 'Fluid',
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: '红树林教育科技后台管理',
+  title: '红树林后台管理',
   pwa: false,
   iconfontUrl: '',
+  layout: 'side',
+  splitMenus: false,
 };
 export default Settings;

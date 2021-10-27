@@ -3,6 +3,7 @@
   "prettier.requireConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
     // "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[javascriptreact]": {
