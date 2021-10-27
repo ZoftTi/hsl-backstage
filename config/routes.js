@@ -19,23 +19,15 @@ export default [
     ],
   },
   {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/admin',
-    name: 'admin',
+    path: '/index',
+    name: '首页',
     icon: 'crown',
-    access: 'canAdmin',
-    component: './Admin',
     routes: [
       {
-        path: '/admin/sub-page',
-        name: 'sub-page',
+        path: '/index/banner',
+        name: '轮播图',
         icon: 'smile',
-        component: './Welcome',
+        component: './Index',
       },
       {
         component: './404',
@@ -43,14 +35,48 @@ export default [
     ],
   },
   {
-    name: 'list.table-list',
+    path: '/cooperate',
+    name: '携手合作',
+    icon: 'crown',
+    routes: [
+      {
+        path: '/cooperate/universities',
+        name: '合作院校',
+        icon: 'smile',
+        component: './Cooperate/universities.jsx',
+      },
+      {
+        path: '/cooperate/common',
+        name: '校企合作',
+        icon: 'smile',
+        component: './Cooperate/common.jsx',
+      },
+      {
+        path: '/cooperate/education',
+        name: '教育体系',
+        icon: 'smile',
+        component: './Cooperate/education.jsx',
+      },
+      {
+        component: './404',
+      },
+    ],
+  },
+  {
+    name: '新闻',
     icon: 'table',
-    path: '/list',
-    component: './TableList',
+    path: '/news',
+    component: './News',
+  },
+  {
+    name: '行业动态',
+    icon: 'table',
+    path: '/information',
+    component: './Information',
   },
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/index/banner',
   },
   {
     component: './404',
