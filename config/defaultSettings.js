@@ -9,7 +9,7 @@ const Settings = {
   title: '红树林后台管理',
   pwa: false,
   logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
-  iconfontUrl: '',
+  iconfontUrl: '//at.alicdn.com/t/font_2852460_zqjls059qjb.js',
   layout: 'side',
   splitMenus: false,
 };
