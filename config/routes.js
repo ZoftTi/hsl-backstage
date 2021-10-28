@@ -75,6 +75,16 @@ export default [
     component: './Information',
   },
   {
+    name: '新增文章',
+    path: '/add-article',
+    component: './AddArticle',
+  },
+  {
+    name: '上传文章',
+    path: '/upload-article',
+    component: './UploadArticle',
+  },
+  {
     path: '/',
     redirect: '/index/banner',
   },
