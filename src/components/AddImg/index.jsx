@@ -7,7 +7,7 @@ const AddImage = (props) => {
   let box = useRef();
   let [src, setSrc] = useState(props.src);
 
-  let [show, toggleDisplay] = useState(props.show || true);
+  let [show, toggleDisplay] = useState(props.show || false);
 
   let selectImg = (e) => {
     if (e.type === 'drop') {
@@ -45,6 +45,7 @@ const AddImage = (props) => {
           {!src && '请选择图片'}
           {src && <img src={src} width="100%" />}
         </div>
+        {props.children}
         <input
           type="file"
           onChange={selectImg}
