@@ -27,9 +27,48 @@
   }
 }
 .modalImg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 190px;
   background: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic9.nipic.com%2F20100914%2F2531170_155644551395_2.jpg&refer=http%3A%2F%2Fpic9.nipic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637918301&t=2774054ec25d312fe8865a3464edbec1')
     no-repeat center;
   background-size: cover;
+  &:hover .uploadBtn {
+    opacity: 1;
+  }
+  .uploadBtn {
+    width: 150px;
+    height: 50px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  .uploadBanner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 50px;
+    padding: 3px 6px;
+    padding-left: 10px;
+    line-height: 25px;
+    background: #fafafb;
+    border: 1px solid #e7eaec;
+    border-left: 3px solid #3fb7eb;
+    border-radius: 2px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    opacity: 0;
+  }
+  .zezhao {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+  }
 }

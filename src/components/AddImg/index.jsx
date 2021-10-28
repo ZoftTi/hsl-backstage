@@ -26,6 +26,7 @@ const AddImage = (props) => {
   let onOk = useCallback(
     (e) => {
       props.onOk(selectEl.current.files[0], e);
+
       closeModal();
     },
     [props.onOk],
