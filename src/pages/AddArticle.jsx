@@ -50,7 +50,13 @@ const AddArticle = (props) => {
                 name="date"
                 initialValue={moment(new Date())}
               />
-              <AddImg />
+              <AddImg
+                text="文章封面"
+                title="文章封面"
+                onOk={(files) => {
+                  console.log(files);
+                }}
+              />
             </ProForm.Group>
           </ProForm>
           <MarkDown id="markdown" ref={ref} />

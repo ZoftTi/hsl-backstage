@@ -1,4 +1,5 @@
-import { forwardRef, useEffect, createPortal } from 'react';
+import { forwardRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 const MarkDown = (props, ref) => {
   let element =
@@ -6,7 +7,6 @@ const MarkDown = (props, ref) => {
   let id = props.id;
   if (!id) {
     throw new Error("<MarkDown id='' /> 请输入id");
-    return null;
   }
 
   useEffect(() => {
