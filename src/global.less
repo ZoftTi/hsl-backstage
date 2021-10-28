@@ -32,6 +32,64 @@ ol {
   list-style: none;
 }
 
+.ant-design-pro > .ant-layout > .ant-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#markdown {
+  flex: 1;
+  margin-top: 20px;
+}
+
+.ant-pro-basicLayout-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.ant-pro-global-footer {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  .ant-pro-global-footer-copyright {
+    padding: 10px 0;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.content-header.ant-layout-header {
+  margin-top: 20px;
+  padding: 0 20px;
+  background-color: #fff;
+
+  .ant-radio-group {
+    margin-left: 20px;
+  }
+
+  .ant-radio-button-wrapper {
+    margin: 0 10px;
+    border: none;
+    &::before {
+      content: none;
+    }
+  }
+
+  .ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+    color: #fff;
+    background-color: #40a9ff;
+  }
+}
+
 @media (max-width: @screen-xs) {
   .ant-table {
     width: 100%;

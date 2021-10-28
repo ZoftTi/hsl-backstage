@@ -7,7 +7,7 @@ export default [
         path: '/user',
         routes: [
           {
-            name: 'login',
+            name: '登录',
             path: '/user/login',
             component: './user/Login',
           },
@@ -73,6 +73,16 @@ export default [
     icon: 'table',
     path: '/information',
     component: './Information',
+  },
+  {
+    name: '新增文章',
+    path: '/add-article',
+    component: './AddArticle',
+  },
+  {
+    name: '上传文章',
+    path: '/upload-article',
+    component: './UploadArticle',
   },
   {
     path: '/',

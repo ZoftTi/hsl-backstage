@@ -21,8 +21,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <title>Ant Design Pro</title>
+    <title>红树林后台管理</title>
     <link rel="icon" href="<%= context.config.publicPath +'favicon.ico'%>" type="image/x-icon" />
+    <link rel="stylesheet" href="<%= context.config.publicPath +'editormd.min.css'%>">
   </head>
   <body>
     <noscript>
@@ -212,7 +213,6 @@
           min-height: 420px;
         "
       >
-        <img src="<%= context.config.publicPath +'pro_icon.svg'%>" alt="logo" width="256" />
         <div class="page-loading-warp">
           <div class="ant-spin ant-spin-lg ant-spin-spinning">
             <span class="ant-spin-dot ant-spin-dot-spin"
@@ -222,14 +222,16 @@
           </div>
         </div>
         <div style="display: flex; align-items: center; justify-content: center">
-          <img
+          <!-- <img
             src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
             width="32"
             style="margin-right: 8px"
-          />
-          Ant Design
+          /> -->
+          <div style="font-size: 24px;">红树林后台管理</div>
         </div>
       </div>
     </div>
+    <script src="<%= context.config.publicPath +'jquery.min.js'%>"></script>
+    <script src="<%= context.config.publicPath +'editormd.min.js'%>"></script>
   </body>
 </html>

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Modal, Button, Card, Space } from 'antd';
-import { createFromIconfontCN } from '@ant-design/icons';
+import { Row, Col, Modal, Button, Card, Space, Upload } from 'antd';
+import { createFromIconfontCN, UploadOutlined } from '@ant-design/icons';
 // 请求方法
 import request from 'umi-request';
+import { PlusOutlined } from '@ant-design/icons';
 
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_2852460_zqjls059qjb.js',
@@ -44,6 +45,24 @@ function BannerBoxItem(props) {
     setVisible(false);
   };
 
+  const yjj = {
+    name: 'file',
+    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+    headers: {
+      authorization: 'authorization-text',
+    },
+    onChange(info) {
+      if (info.file.status !== 'uploading') {
+        console.log(info.file, info.fileList);
+      }
+      if (info.file.status === 'done') {
+        message.success(`${info.file.name} file uploaded successfully`);
+      } else if (info.file.status === 'error') {
+        message.error(`${info.file.name} file upload failed.`);
+      }
+    },
+  };
+
   return (
     <div className="bannerBox">
       <div className="banner" style={{ backgroundImage: 'url(' + props.url + ')' }}></div>
@@ -61,8 +80,12 @@ function BannerBoxItem(props) {
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
       >
-        <div className="modalImg" style={{ backgroundImage: 'url(' + props.url + ')' }}></div>
-        <input type="file" />
+        <div className="modalImg" style={{ backgroundImage: 'url(' + props.url + ')' }}>
+          <Button type="primary">重新上传图片</Button>
+          <Upload {...yjj}>
+            <Button icon={<UploadOutlined />}>Click to Upload</Button>
+          </Upload>
+        </div>
       </Modal>
     </div>
   );
