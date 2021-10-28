@@ -1,5 +1,4 @@
 import { Button, message, notification } from 'antd';
-import { useIntl } from 'umi';
 import defaultSettings from '../config/defaultSettings';
 const { pwa } = defaultSettings;
 const isHttps = document.location.protocol === 'https:';
@@ -21,11 +20,7 @@ const clearCache = () => {
 if (pwa) {
   // Notify user if offline now
   window.addEventListener('sw.offline', () => {
-    message.warning(
-      useIntl().formatMessage({
-        id: 'app.pwa.offline',
-      }),
-    );
+    message.warning('当前处于离线状态');
   }); // Pop up a prompt on the page asking the user if they want to use the latest version
 
   window.addEventListener('sw.updated', (event) => {

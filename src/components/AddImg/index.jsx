@@ -45,6 +45,7 @@ const AddImage = (props) => {
           {!src && '请选择图片'}
           {src && <img src={src} width="100%" />}
         </div>
+        {props.children}
         <input
           type="file"
           onChange={selectImg}
